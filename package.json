@@ -43,7 +43,9 @@
       "parser": "babel-eslint",
       "ecmaVersion": 2020
     },
-    "rules": {}
+    "rules": {
+      "vue/no-unused-vars": "off"
+    }
   },
   "browserslist": [
     "> 1%",
