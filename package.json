@@ -8,18 +8,25 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@coreui/coreui": "^4.0.0-alpha.4",
+    "@coreui/vue": "^3.2.9",
+    "add": "^2.0.6",
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "node-sass": "^5.0.0",
+    "sass-loader": "10.1.1",
+    "vue": "^2.6.11",
+    "yarn": "^1.22.10"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
+    "@vue/cli-service": "^4.1.1",
     "@vue/eslint-config-airbnb": "^5.0.2",
     "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "eslint-plugin-import": "^2.20.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-vue": "^7.9.0",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
@@ -36,9 +43,7 @@
       "parser": "babel-eslint",
       "ecmaVersion": 2020
     },
-    "rules": {
-
-    }
+    "rules": {}
   },
   "browserslist": [
     "> 1%",
