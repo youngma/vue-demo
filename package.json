@@ -12,6 +12,7 @@
     "axios": "^0.21.1",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "core-js": "^3.6.5",
+    "lodash": "^4.17.21",
     "node-sass": "^5.0.0",
     "sass-loader": "10.1.1",
     "vue": "^2.6.11",
