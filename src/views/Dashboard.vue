@@ -454,6 +454,7 @@
 </template>
 
 <script>
+import TEST_API from '../api/TestApi';
 import MainChartExample from './charts/MainChartExample';
 import WidgetsDropdown from './widgets/WidgetsDropdown';
 import WidgetsBrand from './widgets/WidgetsBrand';
@@ -542,6 +543,9 @@ export default {
       }
       return $color;
     },
+  },
+  created() {
+    TEST_API.get();
   },
 };
 </script>

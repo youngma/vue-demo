@@ -12,13 +12,13 @@ module.exports = {
   },
   devServer: {
     proxy: {
-      '^/making/*': {
-        target: 'process.env.DELIVERY_API',
+      '^/TestService/*': {
+        target: process.env.TEST_API,
         changeOrigin: true,
         pathRewrite: {
-          '^/making': '',
+          '^/TestService': '',
         },
-        logLevel: 'debug',
+        logLevel: 'info',
       },
       // '^/item/*': {
       //   target: process.env.ITEM_API,

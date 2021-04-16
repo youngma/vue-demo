@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import VueRouter from 'vue-router';
+import Router from 'vue-router';
 
 // Containers
 const TheContainer = () => import('@/containers/TheContainer');
@@ -57,7 +57,7 @@ const Register = () => import('@/views/pages/Register');
 const Users = () => import('@/views/users/Users');
 const User = () => import('@/views/users/User');
 
-Vue.use(VueRouter);
+Vue.use(Router);
 
 function configRoutes() {
   return [
@@ -336,7 +336,7 @@ function configRoutes() {
   ];
 }
 
-export default new VueRouter({
+export default new Router({
   mode: 'history', // https://router.vuejs.org/api/#mode
   linkActiveClass: 'active',
   scrollBehavior(to, from, savedPosition) {
@@ -346,6 +346,4 @@ export default new VueRouter({
     return { x: 0, y: 0 };
   },
   routes: configRoutes(),
-}).beforeEach((to, from, next) => {
-
 });
