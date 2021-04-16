@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import Router from 'vue-router';
+import VueRouter from 'vue-router';
 
 // Containers
 const TheContainer = () => import('@/containers/TheContainer');
@@ -57,7 +57,7 @@ const Register = () => import('@/views/pages/Register');
 const Users = () => import('@/views/users/Users');
 const User = () => import('@/views/users/User');
 
-Vue.use(Router);
+Vue.use(VueRouter);
 
 function configRoutes() {
   return [
@@ -71,6 +71,9 @@ function configRoutes() {
           path: 'dashboard',
           name: 'Dashboard',
           component: Dashboard,
+          // beforeEnter(to, from, next) {
+          //   $log(to, from, next);
+          // },
         },
         {
           path: 'theme',
@@ -333,9 +336,16 @@ function configRoutes() {
   ];
 }
 
-export default new Router({
-  mode: 'hash', // https://router.vuejs.org/api/#mode
+export default new VueRouter({
+  mode: 'history', // https://router.vuejs.org/api/#mode
   linkActiveClass: 'active',
-  scrollBehavior: () => ({ y: 0 }),
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    }
+    return { x: 0, y: 0 };
+  },
   routes: configRoutes(),
+}).beforeEach((to, from, next) => {
+
 });
